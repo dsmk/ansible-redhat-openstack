@@ -4,7 +4,7 @@
 :INPUT ACCEPT [0:0]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
-{% if 'openstack_controller' in group_names %}
+{% if 'openstack-controller' in group_names %}
 -A INPUT -p gre -j ACCEPT
 -A INPUT -p tcp -m multiport --dports 5000,35357 -j ACCEPT
 -A INPUT -p tcp -m multiport --dports 8080 -j ACCEPT

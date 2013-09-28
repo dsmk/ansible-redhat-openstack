@@ -1,7 +1,7 @@
 ---
 # Creates tenant user and role
 
-- hosts: openstack_controller
+- hosts: openstack-controller
   tasks:
    - name: Create Tenant
      keystone_user: token={{ keystone_admin_token }} tenant={{ tenant_name }} tenant_description="New Tenant"

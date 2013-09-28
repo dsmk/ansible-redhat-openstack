@@ -1,7 +1,7 @@
 ---
 # Playbook to create vm for a tenant
 
-- hosts: openstack_controller
+- hosts: openstack-controller
   tasks:
    - name: Get the image id from glance
      glance_image: login_username={{ tenant_username }} login_password={{ tenant_password }}

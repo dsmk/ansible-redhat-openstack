@@ -1,16 +1,19 @@
 ---
 # The main openstack site deployment playbook
 
-- hosts: all
+- hosts: servers-openstack
+  user: root
   roles:
-   - common
+   - { role: common, tags: [ "openstack-common" ] }
 
-- hosts: openstack_controller
+- hosts: openstack-controller
+  user: root
   roles:
-   - controller
+   - { role: controller, tags: [ "openstack-controller" ] }
 
-- hosts: openstack_compute
-  roles:
-   - compute
+#- hosts: openstack_compute
+#  user: root
+#  roles:
+#   - compute
  
  
